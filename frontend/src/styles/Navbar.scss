@@ -1,0 +1,692 @@
+#Navbar {
+  border-top: 8px solid #2874f0;
+  position: sticky;
+  top: 0;
+  height: 7.5rem;
+  max-width: 100%;
+  margin: auto;
+  display: flex;
+  box-shadow: 0 1px 15px rgba(46, 45, 45, 0.774);
+  background-color: #2874f0;
+  z-index: 999;
+
+  .burger-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    overflow-y: auto;
+    background-color: #2875f0f5;
+
+    .close {
+      display: flex;
+      position: absolute;
+      align-items: center;
+      justify-content: center;
+      right: 2%;
+      top: 2%;
+      border-radius: 50%;
+      color: #2874f0;
+      background-color: white;
+      width: 30px;
+      height: 30px;
+      font-size: 30px;
+    }
+    .logo-div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      width: 50%;
+      height: 10%;
+      .logo {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        text-decoration: none;
+        z-index: 1;
+      }
+    }
+
+    .filter {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 80%;
+      margin: 10% auto;
+
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: white;
+      }
+
+      h2 {
+        font-size: 35px;
+        margin-bottom: 15%;
+      }
+
+      .brand {
+        margin-top: 15%;
+      }
+
+      li {
+        margin-bottom: 10%;
+        font-size: 20px;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+      }
+    }
+
+    a {
+      text-decoration: none;
+    }
+    .contactBtn {
+      display: flex;
+      position: sticky;
+      bottom: 0;
+      font-size: 25px;
+      border: 1px solid #2874f0;
+      padding: 5%;
+      border-radius: 5px;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      height: 25px;
+      color: white;
+      font-weight: 500;
+      background-color: #2874f0;
+    }
+  }
+
+  .mobileSearch {
+    display: none;
+  }
+
+  .desktop-container {
+    display: flex;
+    position: relative;
+    .logo-menu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 14%;
+
+      .menuIcon {
+        display: none;
+      }
+      .logo {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        text-decoration: none;
+        z-index: 1;
+
+        p {
+          display: none;
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .navbar {
+      width: 75%;
+      margin: 0rem 1rem auto;
+
+      .inputs {
+        margin-top: 5px;
+        height: 3.1rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .checkOption {
+          position: absolute;
+          right: 1%;
+          top: 45px;
+          background-color: white;
+          border-radius: 5px;
+          z-index: 5;
+          height: 7.5rem;
+          flex-direction: column;
+          box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .checkInput {
+          border: none;
+          border-bottom: 2px solid rgb(163, 158, 158);
+          outline: none;
+          margin: 5px;
+          padding: 10px;
+          padding-left: 25px;
+        }
+
+        .butt {
+          position: absolute;
+          bottom: 8%;
+        }
+        .pin-res {
+          color: red;
+          font-size: 12px;
+          margin-left: 10px;
+        }
+        .green {
+          color: green;
+        }
+
+        .checkOption button {
+          cursor: pointer;
+          border-radius: 5px;
+          align-items: center;
+          justify-content: center;
+          margin-left: 30px;
+          flex-direction: column;
+          border: none;
+        }
+
+        button {
+          outline: none;
+          width: 4.5rem;
+          border-radius: 5px;
+          padding: 10px;
+          border: none;
+          background-color: #2874f0;
+          color: white;
+          height: 2rem;
+          cursor: pointer;
+        }
+
+        .close {
+          cursor: pointer;
+          border-radius: 5px;
+          color: rgba(0, 0, 0, 0.808);
+          background-color: rgba(75, 72, 72, 0.288);
+          border: none !important;
+          margin-top: 4px;
+          margin-left: 12rem;
+          outline: none;
+        }
+
+        .searchInput {
+          width: 60%;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .searchBox {
+          width: 100%;
+          display: flex;
+          padding: 10px;
+          padding-left: 25px;
+          border-radius: 5px;
+          font-size: 1rem;
+          outline: none;
+          border: 1px solid rgba(0, 0, 0, 0.363);
+        }
+
+        input[type="search"]::-webkit-search-decoration,
+        input[type="search"]::-webkit-search-cancel-button,
+        input[type="search"]::-webkit-search-results-button,
+        input[type="search"]::-webkit-search-results-decoration {
+          display: none;
+        }
+
+        input[type="search"]::placeholder {
+          opacity: 0.8;
+          font-size: 13px;
+        }
+
+        .searchIcon svg {
+          position: absolute;
+          top: 25%;
+          right: 0.6rem;
+          width: 25px;
+          height: 25px;
+          opacity: 0.8;
+          cursor: pointer;
+        }
+
+        .searchIcon svg:hover {
+          color: #2874f0;
+        }
+
+        .hero-btn {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          width: 40%;
+          .location {
+            position: relative;
+            width: 60%;
+            display: flex;
+            margin-right: 1rem;
+            align-items: center;
+            justify-content: center;
+
+            .locationBtn {
+              display: flex;
+              height: 40px;
+              width: 100%;
+              font-weight: 400;
+              font-size: 15px;
+              justify-content: center;
+              align-items: center;
+              border-radius: 5px;
+              border: none;
+              background-color: #dddddd;
+              cursor: pointer;
+            }
+            .locationIcon {
+              width: 20px;
+              height: 20px;
+              opacity: 0.8;
+              cursor: pointer;
+            }
+          }
+
+          .location:hover,
+          .locationBtn:hover {
+            color: #2874f0;
+          }
+
+          .otherIcon {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            // margin: 5px 50px 0 50px;
+
+            .cart {
+              position: relative;
+
+              p {
+                display: flex;
+                position: absolute;
+                width: 16px;
+                font-size: 12px;
+                font-weight: 800;
+                justify-content: center;
+                align-items: center;
+                height: 16px;
+                top: 5px;
+                right: 5px;
+                background-color: white;
+                color: #2874f0;
+                border-radius: 50%;
+              }
+            }
+            svg {
+              margin: 8px;
+              width: 30px;
+              height: 30px;
+              cursor: pointer;
+              color: white;
+            }
+          }
+
+          .userIcon {
+            position: relative;
+          }
+
+          .user {
+            display: flex;
+            position: absolute;
+            top: 40px;
+            right: 0%;
+            flex-direction: column;
+
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+
+            .logout {
+              background-color: rgb(219, 9, 9);
+              color: white;
+            }
+            .logout:hover {
+              background-color: rgb(197, 8, 8);
+            }
+
+            div {
+              display: flex;
+
+              a {
+                padding-left: 1rem;
+                text-decoration: none;
+                width: 180px;
+                display: flex;
+                height: 30px;
+                color: rgba(0, 0, 0, 0.801);
+                align-items: center;
+              }
+              a:hover {
+                background: rgba(128, 128, 128, 0.233);
+              }
+            }
+          }
+        }
+      }
+
+      .buttons {
+        display: flex;
+        margin-top: 5px !important;
+        margin: auto;
+        align-items: center;
+
+        height: 3.1rem;
+        width: 100%;
+        justify-content: center;
+
+        select {
+          width: 25%;
+          background-color: white;
+          padding-right: 15px;
+          color: black;
+          height: 35px;
+          border: none;
+          border-radius: 5px;
+          padding-left: 15px;
+          outline: none;
+        }
+
+        select * {
+          background-color: white;
+          color: black;
+        }
+
+        .catBtn {
+          display: flex;
+          width: 60%;
+
+          button {
+            display: flex;
+            color: white;
+            justify-items: space-around;
+            margin: auto;
+            justify-content: center;
+            background-color: transparent;
+            border: none;
+            font-weight: 400;
+            font-size: 15px;
+            cursor: pointer;
+            padding: 1px;
+          }
+        }
+
+        .contactBtn {
+          font-size: 15px;
+          border: 1px solid #000000;
+          padding: 0px 5px 0px 5px;
+          border-radius: 5px;
+          width: 15%;
+          align-items: center;
+          justify-content: center;
+          height: 25px;
+          color: black;
+        }
+
+        .contactBtn:hover {
+          color: #2874f0;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 930px) {
+    #Navbar {
+      .desktop-container {
+        .navbar {
+          .inputs {
+            .hero-btn {
+              .locationBtn {
+                span {
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    span {
+      font-size: 12px;
+    }
+  }
+}
+
+.hidden {
+  transform: translateY(-100%);
+}
+
+@media screen and (max-width: 830px) {
+  #Navbar {
+    .desktop-container {
+      .navbar {
+        .buttons {
+          .contactBtn {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #Navbar {
+    .desktop-container {
+      .navbar {
+        .inputs {
+          .otherIcon {
+            margin-left: 10px;
+          }
+          .hero-btn {
+            .locationBtn {
+              span {
+                display: none;
+              }
+            }
+
+            .location {
+              width: 40%;
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  #Navbar {
+    display: flex;
+    align-items: center;
+
+    .desktop-container {
+      .navbar {
+        margin: 0rem 1rem;
+        display: flex;
+        align-items: center;
+        .buttons {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #Navbar {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: none;
+    height: 6rem;
+    background-color: #2874f0;
+
+    .desktop-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+
+      img {
+        object-fit: contain;
+        aspect-ratio: 6/2;
+      }
+
+      .logo-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 35%;
+
+        svg {
+          width: 20px;
+          color: white;
+          font-size: 20px;
+          margin-left: 10px;
+        }
+
+        .logo {
+          margin-top: 0px;
+          width: 57px;
+          height: auto;
+        }
+        .logo p {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: #bb3b3b;
+          font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .menuIcon {
+          display: flex;
+        }
+      }
+      .navbar {
+        width: 100%;
+
+        .inputs {
+          justify-content: flex-end;
+          align-items: center;
+          .searchInput {
+            display: none;
+          }
+
+          .checkOption {
+            position: absolute;
+            right: 0;
+            top: 15px;
+          }
+
+          .hero-btn {
+            width: 28%;
+            .location {
+              width: 30px;
+              height: 8px;
+
+              .locationBtn {
+                background-color: #2874f0;
+                color: white;
+              }
+            }
+
+            .locationIcon {
+              width: 20px;
+            }
+            .otherIcon {
+              .cart p {
+                background-color: white;
+                color: #2874f0;
+                width: 12px;
+                height: 12px;
+                font-size: 8px;
+              }
+              svg {
+                color: white;
+                width: 20px;
+                height: 20px;
+              }
+
+              svg:hover {
+                color: white;
+              }
+
+              .user {
+                top: 30px;
+                right: 0%;
+              }
+            }
+          }
+        }
+      }
+    }
+    .mobileSearch {
+      display: flex;
+      position: relative;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .searchBox {
+      width: 100%;
+      margin: 0 0.2rem;
+      display: flex;
+      padding: 5px;
+      padding-left: 35px;
+      border-radius: 3px;
+      font-size: 1rem;
+      outline: none;
+      border: none;
+    }
+    input[type="search"]::-webkit-search-decoration,
+    input[type="search"]::-webkit-search-cancel-button,
+    input[type="search"]::-webkit-search-results-button,
+    input[type="search"]::-webkit-search-results-decoration {
+      display: none;
+    }
+
+    input[type="search"]::placeholder {
+      opacity: 0.8;
+      font-size: 13px;
+    }
+
+    .mobileSearch svg {
+      position: absolute;
+      top: 20%;
+      left: 0.6rem;
+      width: 20px;
+      height: 20px;
+      opacity: 0.8;
+      cursor: pointer;
+    }
+
+    .searchIcon svg:hover {
+      color: #2874f0;
+    }
+  }
+}

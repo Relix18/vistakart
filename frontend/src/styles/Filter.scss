@@ -1,0 +1,87 @@
+#filter {
+  border: 0.15rem solid #2874f0;
+  border-radius: 15px;
+  background-color: white;
+  min-width: 7.5rem;
+  padding: 1rem;
+  margin: 0 1rem 1rem 0;
+
+  h2 {
+    display: flex;
+    justify-content: center;
+  }
+
+  p {
+    margin: 1rem 0 0.5rem 0;
+    font-weight: 600;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #filter {
+    display: none;
+  }
+}
+
+.option {
+  margin-bottom: 1.5rem;
+}
+
+.brands {
+  margin-bottom: 0rem;
+}
+label {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+[type="checkbox"]:checked + label,
+[type="checkbox"]:not(:checked) + label {
+  position: relative;
+  padding-left: 1.5rem;
+  line-height: 2rem;
+  cursor: pointer;
+}
+
+[type="checkbox"]:checked + label:before,
+[type="checkbox"]:not(:checked) + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #949292;
+  border-radius: 5px;
+  background: #fff;
+}
+
+[type="checkbox"]:checked + label:after,
+[type="checkbox"]:not(:checked) + label:after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: #2874f0;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}

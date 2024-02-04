@@ -1,0 +1,29 @@
+#home {
+  min-height: 100vh;
+
+  .carousel {
+    width: 100%;
+    margin: auto;
+    margin-top: 1px !important;
+  }
+
+  img {
+    width: 100%;
+    margin: auto;
+    display: block;
+    inset: 0px;
+    padding: inherit;
+    object-fit: cover;
+    aspect-ratio: 120 / 35;
+  }
+
+  @media screen and (max-width: 600px) {
+    .carousel {
+      width: 100%;
+
+      img {
+        aspect-ratio: 100 / 30;
+      }
+    }
+  }
+}

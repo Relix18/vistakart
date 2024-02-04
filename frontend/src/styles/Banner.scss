@@ -1,0 +1,84 @@
+#banner {
+  display: grid;
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  grid-template-columns: 1fr 5fr;
+
+  .bannerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 1px solid gray;
+
+    .banner {
+      display: flex;
+      overflow: hidden;
+      flex-direction: column;
+      width: 60%;
+      align-items: center;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      background-color: white;
+      padding: 2rem;
+      border-radius: 10px;
+      filter: drop-shadow(0 0 0.1rem rgb(0, 0, 0));
+
+      .bannerItem {
+        position: relative;
+        transition: all 0.5s;
+        width: 100%;
+        margin-bottom: 1rem;
+
+        h1 {
+          margin-bottom: 1rem;
+        }
+
+        img {
+          margin-bottom: 1rem;
+          width: 100%;
+        }
+
+        .deleteIcon {
+          position: absolute;
+          right: 2%;
+          bottom: 10%;
+          cursor: pointer;
+          background-color: white;
+          border-radius: 50%;
+          width: 2rem;
+          height: 2rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          svg {
+            font-size: 1.5rem;
+          }
+
+          svg:hover {
+            color: #2874f0;
+          }
+        }
+      }
+
+      .bannerItem:hover {
+        scale: 1.05;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #banner {
+    grid-template-columns: 1fr;
+
+    .bannerContainer {
+      border-left: none;
+
+      .banner {
+        width: 80%;
+      }
+    }
+  }
+}

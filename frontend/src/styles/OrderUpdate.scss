@@ -1,0 +1,173 @@
+#orderUpdate {
+  display: grid;
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  grid-template-columns: 1fr 3.5fr 1.5fr;
+
+  .orderUpdateContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 1px solid gray;
+  }
+
+  .orderStatusContainer {
+    border-left: 1px solid gray;
+    background-color: white;
+
+    form {
+      width: 70%;
+      margin: auto;
+      margin-top: 10rem;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+      border-radius: 10px;
+
+      h1 {
+        font-size: 1.5rem;
+        text-align: center;
+      }
+
+      .form-section {
+        width: 100%;
+
+        .create-btn {
+          width: 100%;
+          border-radius: 5px;
+          border: none;
+          padding: 1rem;
+          margin-top: 1rem;
+          background-color: #2874f0;
+          color: white;
+          font-size: 14px;
+          font-weight: 600;
+          height: 2.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+        }
+        button:disabled {
+          cursor: not-allowed;
+          background-color: rgb(197, 193, 193);
+          color: black;
+        }
+
+        .input {
+          border: 1px solid rgba(128, 128, 128, 0.726);
+          border-radius: 5px;
+          display: flex;
+          align-items: center;
+          margin-top: 3rem;
+          box-sizing: border-box;
+
+          svg {
+            position: absolute;
+            font-size: 2rem;
+            margin-left: 0.5rem;
+          }
+        }
+
+        input,
+        textarea,
+        select {
+          width: 100%;
+          margin: 0.5rem 0;
+          padding: 0 4vmax;
+          outline: none;
+          border: none;
+          font-size: 1.1rem;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #orderUpdate {
+    grid-template-columns: 1fr;
+    position: relative;
+
+    .orderUpdateContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: none;
+      width: 90%;
+      margin: auto;
+    }
+
+    .orderStatusContainer {
+      border-left: none;
+      position: sticky;
+      bottom: 0;
+
+      form {
+        margin-top: 0;
+
+        h1 {
+          font-size: 1.2rem;
+        }
+
+        .form-section {
+          width: 100%;
+
+          .create-btn {
+            width: 100%;
+            border-radius: 5px;
+            border: none;
+            padding: 1rem;
+            margin-top: 1rem;
+            background-color: #2874f0;
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+            height: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+          }
+          button:disabled {
+            cursor: not-allowed;
+            background-color: rgb(197, 193, 193);
+            color: black;
+          }
+
+          .input {
+            border: 1px solid rgba(128, 128, 128, 0.726);
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            margin: 3rem 0;
+            margin-top: 1rem;
+            box-sizing: border-box;
+
+            svg {
+              position: absolute;
+              font-size: 2rem;
+              margin-left: 0.5rem;
+            }
+          }
+
+          input,
+          textarea,
+          select {
+            width: 100%;
+            margin: 0.5rem 0;
+            padding: 0 3rem;
+            outline: none;
+            border: none;
+            font-size: 1.1rem;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+}

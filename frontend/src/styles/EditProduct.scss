@@ -1,0 +1,183 @@
+#editProduct {
+  display: grid;
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  grid-template-columns: 1fr 5fr;
+
+  .editContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 1px solid gray;
+    margin-top: 1rem;
+
+    form {
+      width: 40%;
+      margin: auto;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+      border-radius: 10px;
+      filter: drop-shadow(0 0 0.1rem rgb(0, 0, 0));
+
+      .form-section {
+        width: 100%;
+        .create-btn {
+          width: 100%;
+          border-radius: 5px;
+          border: none;
+          padding: 1rem;
+          margin-top: 1rem;
+          background-color: #2874f0;
+          color: white;
+          font-size: 14px;
+          font-weight: 600;
+          height: 2.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+        }
+
+        .input {
+          border: 1px solid rgba(128, 128, 128, 0.726);
+          border-radius: 5px;
+          display: flex;
+          align-items: center;
+          margin: 1rem 0;
+          box-sizing: border-box;
+
+          svg {
+            position: absolute;
+            font-size: 2rem;
+            margin-left: 0.5rem;
+          }
+        }
+
+        input,
+        textarea,
+        select {
+          width: 100%;
+          margin: 0.5rem 0;
+          padding: 0 4vmax;
+          outline: none;
+          border: none;
+          font-size: 1.1rem;
+          border-radius: 5px;
+          background-color: white;
+        }
+
+        .main-col {
+          .select {
+            .file {
+              .file-input {
+                padding: 0;
+              }
+
+              p {
+                color: red;
+                font-style: italic;
+              }
+              // .file-input::file-selector-button {
+
+              // }
+
+              // .file-input::file-selector-button:hover {
+              //   background-color: rgb(209, 205, 205);
+              // }
+
+              .file-input::-webkit-file-upload-button {
+                visibility: hidden;
+              }
+              .file-input::before {
+                cursor: pointer;
+                width: 100%;
+                border-radius: 5px;
+                z-index: 2;
+                height: 5vh;
+                margin: 0%;
+                transition: all 0.5s;
+                padding: 0 1vmax;
+                color: rgba(0, 0, 0, 0.623);
+                background-color: rgb(197, 193, 193);
+                content: "Choose Images";
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                border: none;
+                outline: none;
+                white-space: nowrap;
+                -webkit-user-select: none;
+                user-select: none;
+                font-weight: 700;
+                font-size: 0.9rem;
+              }
+
+              .thumb::before {
+                content: "Choose Thumbnail";
+              }
+
+              .file-input:hover::before {
+                border-color: black;
+              }
+              .input:active::before {
+                background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+              }
+            }
+          }
+        }
+
+        .preview {
+          display: flex;
+
+          overflow: auto;
+
+          img {
+            width: 100px;
+            height: 120px;
+            margin-left: 1rem;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #editProduct {
+    grid-template-columns: 1fr;
+
+    .editContainer {
+      border-left: none;
+
+      form {
+        width: 80%;
+
+        .form-section {
+          .input {
+            svg {
+              font-size: 1.5rem;
+              margin-left: 0.5rem;
+            }
+          }
+
+          input,
+          textarea,
+          select {
+            width: 100%;
+            margin: 0.5rem 0;
+            padding: 0 3rem;
+            outline: none;
+            border: none;
+            font-size: 1.1rem;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+}

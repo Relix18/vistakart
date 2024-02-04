@@ -1,0 +1,71 @@
+#Pagination {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+  margin-right: 1rem;
+  align-items: center;
+
+  p {
+    margin-right: 5px;
+    padding: 1rem;
+    font-size: 1.2vmax;
+  }
+  .active {
+    background-color: #2874f0;
+    color: white;
+    border: none;
+  }
+
+  .active:hover {
+    color: white;
+  }
+
+  .btn {
+    width: 50px;
+  }
+
+  button {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid gray;
+  }
+
+  button:disabled,
+  button:disabled:hover {
+    cursor: not-allowed;
+    color: gray;
+  }
+
+  button:hover {
+    color: #2874f0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #Pagination {
+    margin-right: 10px;
+
+    p {
+      margin-right: 0;
+      padding: 0.5rem;
+      font-size: 1.5vmax;
+    }
+
+    .btn {
+      width: 30px;
+      font-size: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    button {
+      width: 20px;
+      font-size: 10px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

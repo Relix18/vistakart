@@ -1,0 +1,227 @@
+.modal-buttons-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 2rem;
+}
+
+.modal-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #007bff; /* Change the background color to your preferred color */
+  transition: background-color 0.3s ease;
+}
+
+.modal-button:hover {
+  background-color: #0056b3; /* Change the hover background color */
+}
+
+/* Style for the delete button in the confirmation modal */
+.delete-button {
+  background-color: #dc3545; /* Red color for delete button */
+}
+
+.delete-button:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+#productListAdmin {
+  display: grid;
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  grid-template-columns: 1fr 5fr;
+
+  .productContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 1px solid gray;
+
+    #ProductList {
+      width: 80%;
+      margin: auto;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+
+      h1 {
+        margin-bottom: 1rem;
+      }
+
+      .product {
+        filter: drop-shadow(0 0 0.1rem rgb(0, 0, 0));
+        background-color: white;
+        width: 100%;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 10px;
+      }
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+
+      thead {
+        font-weight: 600;
+        font-size: 1.4vmax;
+        height: 2rem;
+        background-color: #2874f0;
+        color: white;
+      }
+
+      tbody {
+        font-weight: 500;
+
+        tr {
+          font-size: 1.2vmax;
+
+          td {
+            text-align: center;
+            border: none;
+
+            img {
+              display: flex;
+              flex-direction: row;
+              width: 3rem;
+              height: 3rem;
+              object-fit: cover;
+              border-radius: 50%;
+            }
+
+            a {
+              color: black;
+            }
+
+            svg {
+              cursor: pointer;
+              margin: 0.5rem;
+              font-size: 1.5rem;
+              transition: all 0.5s;
+            }
+
+            .delete {
+              background-color: red;
+              color: black;
+              width: 50px;
+              height: 50px;
+            }
+            svg:hover {
+              color: #2874f0;
+              scale: 1.2;
+            }
+          }
+
+          button {
+            padding: 5px 10px;
+            font-size: 1.2vmax;
+            background-color: #2874f0;
+            color: white;
+            border: none;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .Pagination {
+    display: flex;
+    width: 20rem;
+    margin: auto;
+    align-items: center;
+
+    p {
+      margin: 0.5rem;
+    }
+
+    button {
+      margin-left: 5px;
+      height: 30px;
+      width: 50px;
+      color: white;
+      border: none;
+      background-color: #2874f0;
+      border-radius: 5px;
+    }
+    button:disabled {
+      cursor: not-allowed;
+      background-color: rgb(197, 193, 193);
+      color: black;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #productListAdmin {
+    grid-template-columns: 1fr;
+
+    .productContainer {
+      border-left: none;
+
+      #ProductList {
+        width: 100%;
+        .product {
+          width: 90%;
+          margin: auto;
+
+          table {
+            thead {
+              font-size: 1.4vmax;
+            }
+          }
+
+          img {
+            width: 2rem;
+            height: 2rem;
+          }
+          svg {
+            cursor: pointer;
+            margin: 0.5rem;
+            font-size: 1rem;
+            transition: all 0.5s;
+          }
+        }
+      }
+    }
+
+    .Pagination {
+      display: flex;
+
+      width: 15rem;
+      margin: auto;
+      margin-top: 1rem;
+      align-items: center;
+
+      p {
+        margin: 0.5rem;
+        font-size: 0.8rem;
+      }
+
+      button {
+        margin-left: 5px;
+        height: 25px;
+        width: 40px;
+        color: white;
+        font-size: 0.8rem;
+        border: none;
+        background-color: #2874f0;
+        border-radius: 5px;
+      }
+      button:disabled {
+        cursor: not-allowed;
+        background-color: rgb(197, 193, 193);
+        color: black;
+      }
+    }
+  }
+}

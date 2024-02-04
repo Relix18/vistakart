@@ -1,0 +1,210 @@
+#orders {
+  display: grid;
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  grid-template-columns: 1fr 5fr;
+
+  .orderContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 1px solid gray;
+
+    h1 {
+      text-align: center;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+
+      thead {
+        font-weight: 600;
+        font-size: 1.4vmax;
+        height: 2rem;
+        background-color: #2874f0;
+        color: white;
+      }
+
+      tbody {
+        font-weight: 500;
+
+        tr {
+          font-size: 1.2vmax;
+          .orderStatus {
+            &.shipped {
+              color: #ff9900; /* Orange for processing status */
+            }
+
+            &.processing {
+              color: #ff0000; /* Red for canceled status */
+            }
+
+            &.canceled {
+              color: #007bff; /* Blue for delivered status */
+            }
+
+            &.delivered {
+              color: #00ff00; /* Green for shipped status */
+            }
+
+            /* Add more classes for other order statuses as needed */
+          }
+          td {
+            text-align: center;
+            border: none;
+
+            img {
+              display: flex;
+              flex-direction: row;
+              width: 3rem;
+              height: 3rem;
+              object-fit: cover;
+              border-radius: 50%;
+            }
+
+            a {
+              color: black;
+            }
+
+            svg {
+              cursor: pointer;
+              margin: 0.5rem;
+              font-size: 1.5rem;
+              transition: all 0.5s;
+            }
+
+            .delete {
+              background-color: red;
+              color: black;
+              width: 50px;
+              height: 50px;
+            }
+            svg:hover {
+              color: #2874f0;
+              scale: 1.2;
+            }
+          }
+
+          button {
+            padding: 5px 10px;
+            font-size: 1.2vmax;
+            background-color: #2874f0;
+            color: white;
+            border: none;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .Pagination {
+    display: flex;
+    width: 20rem;
+    margin: auto;
+    align-items: center;
+
+    p {
+      margin: 0.5rem;
+    }
+
+    button {
+      margin-left: 5px;
+      height: 30px;
+      width: 50px;
+      color: white;
+      border: none;
+      background-color: #2874f0;
+      border-radius: 5px;
+    }
+    button:disabled {
+      cursor: not-allowed;
+      background-color: rgb(197, 193, 193);
+      color: black;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #orders {
+    grid-template-columns: 1fr;
+
+    .orderContainer {
+      border-left: none;
+
+      #Orders {
+        width: 95%;
+
+        .order {
+          padding: 1px;
+          overflow: hidden;
+          .orderId {
+            width: 90%;
+            margin: auto;
+            margin-top: 1rem;
+
+            table {
+              thead {
+                font-size: 0.6rem;
+              }
+            }
+
+            img {
+              width: 2rem;
+              height: 2rem;
+            }
+
+            span {
+              width: 12px;
+              height: 12px;
+              text-align: center;
+
+              svg {
+                cursor: pointer;
+                margin-left: 0.2rem;
+                font-size: 0.8rem;
+                transition: all 0.5s;
+              }
+            }
+
+            svg {
+              font-size: 0.8rem;
+            }
+          }
+        }
+      }
+    }
+
+    .Pagination {
+      display: flex;
+
+      width: 15rem;
+      margin: auto;
+      margin-top: 1rem;
+      align-items: center;
+
+      p {
+        margin: 0.5rem;
+        font-size: 0.8rem;
+      }
+
+      button {
+        margin-left: 5px;
+        height: 25px;
+        width: 40px;
+        color: white;
+        font-size: 0.8rem;
+        border: none;
+        background-color: #2874f0;
+        border-radius: 5px;
+      }
+      button:disabled {
+        cursor: not-allowed;
+        background-color: rgb(197, 193, 193);
+        color: black;
+      }
+    }
+  }
+}
