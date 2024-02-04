@@ -21,7 +21,7 @@ dotenv.config({ path: "data/config.env" });
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 //middlewares
-app.use(express.static(path.resolve(__dirname, "build")));
+app.use(express.static(path.resolve(__dirname, "dist")));
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ limit: "50mb", extended: true }));
 app.use(
@@ -48,5 +48,5 @@ app.use("/api/v1/getkey", (req, res) => {
 app.use(errorMiddleware);
 
 app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "build", "index.html"));
+  res.sendFile(path.resolve(__dirname, "dist", "index.html"));
 });
