@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import "../styles/Navbar.scss";
-import logo from "../assets/LOGO_BLACK.png";
+import logo from "../assets/LOGO_WHITE.png";
 import { BsCart3 } from "react-icons/bs";
 import { IoIosSearch } from "react-icons/io";
 import { IoClose, IoLocationSharp } from "react-icons/io5";
@@ -14,7 +14,6 @@ import { zipCodes } from "./utils/common.jsx";
 import { authenticated, selectUserInfo } from "../redux/user/userSlice.js";
 import {
   productAsync,
-  productsCategoryAsync,
   selectBrands,
   selectCategories,
 } from "../redux/product/productSlice";
